@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-page-lang="bilingual"
+      data-lang="zh"
+      data-theme-mode="auto"
+      data-title-zh="No Uninstall Icon（我不需要卸载图标）· 王云正"
+      data-title-en="No Uninstall Icon · 王云正">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>No Uninstall Icon（我不需要卸载图标）· 王云正</title>
+  <meta name="description" content="一个零依赖的 Windows 小工具：隐藏不想看到的开始菜单卸载快捷方式。" data-desc-zh="一个零依赖的 Windows 小工具：隐藏不想看到的开始菜单卸载快捷方式。" data-desc-en="A tiny, zero-dependency Windows utility for hiding Start menu uninstall shortcuts you don't want to see.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f3f3f3">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <script src="/assets/js/boot.js"></script>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body class="software-page software-page--nui">
+  <a class="skip-link" href="#main">
+    <span class="lang-zh">跳到主要内容</span><span class="lang-en">Skip to content</span>
+  </a>
+
+  <header class="site-header" data-site-header>
+    <div class="header-inner">
+      <a class="brand" href="/" data-brand data-aria-zh="王云正，返回首页" data-aria-en="Wang Yunzheng, home">
+        <span class="brand__word" aria-hidden="true">
+          <img class="brand__ink brand__ink--light" src="/assets/img/wordmark-light.svg" alt="王云正" width="2932" height="936" decoding="async">
+          <img class="brand__ink brand__ink--dark" src="/assets/img/wordmark-dark.svg" alt="王云正" width="2932" height="936" decoding="async">
+          <span class="brand__sheen"></span>
+        </span>
+        <span class="sr-only">王云正</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航" data-aria-zh="主导航" data-aria-en="Primary navigation">
+        <a class="nav-link" href="/"><span class="lang-zh">作品</span><span class="lang-en">Works</span></a>
+        <a class="nav-link" href="/#localization"><span class="lang-zh">汉化</span><span class="lang-en">Localization</span></a>
+        <a class="nav-link" href="/#software"><span class="lang-zh">软件</span><span class="lang-en">Software</span></a>
+      </nav>
+
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="打开导航">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+        <a href="/"><span><span class="lang-zh">作品</span><span class="lang-en">Works</span></span></a>
+        <a href="/#localization"><span><span class="lang-zh">汉化</span><span class="lang-en">Localization</span></span></a>
+        <a href="/#software"><span><span class="lang-zh">软件</span><span class="lang-en">Software</span></span></a>
+      </div>
+
+      <div class="header-actions">
+        <div class="theme-picker" data-theme-picker>
+          <button class="icon-btn theme-trigger" type="button" data-theme-trigger aria-expanded="false" aria-controls="theme-menu" aria-label="主题设置">
+            <span class="theme-icon theme-icon--auto" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span>
+            <span class="theme-icon theme-icon--light" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></span>
+            <span class="theme-icon theme-icon--dark" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M20.4 14.4A8.5 8.5 0 0 1 9.6 3.6 8.5 8.5 0 1 0 20.4 14.4Z"/></svg></span>
+          </button>
+          <div class="theme-menu" id="theme-menu" data-theme-menu role="group" aria-label="主题" data-aria-zh="主题" data-aria-en="Theme" hidden>
+            <div class="theme-menu__label"><span class="lang-zh">外观</span><span class="lang-en">Appearance</span></div>
+            <button class="theme-option" type="button" data-theme-choice="auto" aria-pressed="true">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg><span><span class="lang-zh">跟随系统</span><span class="lang-en">System</span></span><svg class="icon theme-option__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>
+            </button>
+            <button class="theme-option" type="button" data-theme-choice="light" aria-pressed="false">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><span><span class="lang-zh">浅色</span><span class="lang-en">Light</span></span><svg class="icon theme-option__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>
+            </button>
+            <button class="theme-option" type="button" data-theme-choice="dark" aria-pressed="false">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 14.4A8.5 8.5 0 0 1 9.6 3.6 8.5 8.5 0 1 0 20.4 14.4Z"/></svg><span><span class="lang-zh">深色</span><span class="lang-en">Dark</span></span><svg class="icon theme-option__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>
+            </button>
+          </div>
+        </div>
+        <button class="lang-toggle" type="button" data-language-toggle aria-label="Switch to English">
+          <svg class="icon icon--small" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3Z"/></svg>
+          <span class="lang-zh" aria-hidden="true">EN</span>
+          <span class="lang-en" aria-hidden="true">中</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__fill" data-scroll-progress></div></div>
+
+  <main id="main" class="software-main" tabindex="-1">
+    <section class="software-hero">
+      <div class="container software-hero__grid">
+        <div class="software-hero__copy">
+          <div class="software-hero__kicker enter" style="--i: 0">
+            <span class="eyebrow"><span class="lang-zh">软件 / 01</span><span class="lang-en">Software / 01</span></span>
+            <span class="meta-chip">Windows 10 / 11</span>
+          </div>
+          <h1 class="software-title enter" style="--i: 1">No Uninstall <span class="accent-word">Icon</span></h1>
+          <p class="software-title-cn enter" style="--i: 2">
+            <span class="lang-zh">我不需要卸载图标</span>
+            <span class="lang-en">A tiny Windows utility for the Start menu.</span>
+          </p>
+          <p class="software-tagline enter" style="--i: 3">
+            <span class="lang-zh">让开始菜单里不想看到的卸载项，安静地消失。</span>
+            <span class="lang-en">Make the Start menu shortcuts you don't want to see quietly disappear.</span>
+          </p>
+          <p class="software-lead enter" style="--i: 3">
+            <span class="lang-zh">不删除任何文件，也不改卸载流程。它只把选中的开始菜单快捷方式设为隐藏，让列表清爽一点。</span>
+            <span class="lang-en">Nothing is deleted, and uninstall flows are left alone. It simply hides the Start menu shortcuts you choose.</span>
+          </p>
+          <div class="software-actions enter" style="--i: 4">
+            <a class="btn btn--primary btn--large reveal" href="https://github.com/JerryABCD06/NoUninstallIcon" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon--fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              <span class="lang-zh">在 GitHub 查看</span><span class="lang-en">View on GitHub</span>
+            </a>
+            <a class="btn btn--secondary btn--large reveal" href="#what-it-does">
+              <span class="lang-zh">看看它做什么</span><span class="lang-en">See what it does</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+            </a>
+          </div>
+          <div class="software-chips enter" style="--i: 5">
+            <span class="software-chip">C++20</span>
+            <span class="software-chip"><span class="lang-zh">零依赖</span><span class="lang-en">0 dependencies</span></span>
+            <span class="software-chip">Mica</span>
+            <span class="software-chip">Windows 10 1809+ / 11</span>
+          </div>
+        </div>
+
+        <div class="software-hero__visual enter" style="--i: 3">
+          <div class="hero-window-wrap" aria-hidden="true">
+            <div class="hero-window" data-tilt>
+              <div class="hero-window__bar">
+                <div class="window-dots"><i></i><i></i><i></i></div>
+                <span>No Uninstall Icon</span>
+              </div>
+              <div class="hero-window__body hero-window__body--nui">
+                <div class="hero-window__sidebar">
+                  <span class="side-line"></span>
+                  <span class="side-line"></span>
+                  <span class="side-line"></span>
+                  <span class="side-line"></span>
+                </div>
+                <div class="hero-list">
+                  <div class="hero-list__row"><span class="hero-list__check">✓</span><span class="hero-list__copy"><i></i><i></i></span></div>
+                  <div class="hero-list__row"><span class="hero-list__check">✓</span><span class="hero-list__copy"><i></i><i></i></span></div>
+                  <div class="hero-list__row"><span class="hero-list__check">✓</span><span class="hero-list__copy"><i></i><i></i></span></div>
+                  <div class="hero-list__row"><span class="hero-list__check">✓</span><span class="hero-list__copy"><i></i><i></i></span></div>
+                  <div class="hero-list__row hero-list__row--ghost"><span class="hero-list__check">✓</span><span class="hero-list__copy"><i></i><i></i></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-chapter software-chapter--compact" id="what-it-does">
+      <div class="container">
+        <div class="chapter-label" data-reveal>02 / The problem</div>
+        <h2 class="chapter-statement" data-reveal>
+          <span class="lang-zh">卸载项，<span class="soft">不应该</span>一直住在开始菜单里。</span>
+          <span class="lang-en">Uninstall shortcuts <span class="soft">shouldn't</span> live in your Start menu forever.</span>
+        </h2>
+        <div class="chapter-lede" data-reveal>
+          <p class="lang-block lang-zh">No Uninstall Icon 扫描开始菜单，把所有看起来像卸载项的快捷方式集中到一组。勾选即隐藏，取消即恢复；开始菜单还是那个开始菜单，只是少了几行不想看到的东西。</p>
+          <p class="lang-block lang-en">No Uninstall Icon scans the Start menu, groups every shortcut that looks like an uninstall entry, and gives each one a checkbox. Check to hide, uncheck to restore. The Start menu stays the same — just a little less crowded.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screenshot-chapter" aria-labelledby="nui-shot-1-title">
+      <div class="container">
+        <div class="chapter-label" data-reveal>03 / Interface</div>
+        <div class="screenshot-chapter__head" data-reveal>
+          <h2 class="screenshot-chapter__title" id="nui-shot-1-title"><span class="lang-zh">主窗口</span><span class="lang-en">Main window</span></h2>
+          <span class="screenshot-chapter__meta">Screenshot 01 · Light theme</span>
+        </div>
+        <figure data-reveal>
+          <div class="screenshot-frame screenshot-frame--window" role="img" aria-label="No Uninstall Icon 主窗口截图占位，浅色主题，16 比 9" data-aria-zh="No Uninstall Icon 主窗口截图占位，浅色主题，16 比 9" data-aria-en="Placeholder for the No Uninstall Icon main window, light theme, 16 by 9">
+            <div class="screenshot-frame__bar" aria-hidden="true">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <span>No Uninstall Icon / Main window</span>
+            </div>
+            <div class="screenshot-frame__canvas">
+              <div class="screenshot-frame__mock" aria-hidden="true">
+                <div class="screenshot-frame__mock-side"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="screenshot-frame__mock-main"><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="screenshot-frame__inner" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                <strong><span class="lang-zh">界面截图位</span><span class="lang-en">Screenshot slot</span></strong>
+                <span>16:9 · 1920 × 1080</span>
+              </div>
+            </div>
+          </div>
+          <figcaption class="screenshot-caption">
+            <span><strong><span class="lang-zh">主窗口，浅色主题</span><span class="lang-en">Main window, light theme</span></strong> · <span class="lang-zh">截图待补充</span><span class="lang-en">screenshot to be added</span></span>
+            <span>NUI / 01</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="software-chapter" aria-labelledby="nui-how-title">
+      <div class="container">
+        <div class="chapter-split">
+          <div class="chapter-split__head">
+            <div class="chapter-label" data-reveal>04 / How it works</div>
+            <h2 class="chapter-title" id="nui-how-title" data-reveal>
+              <span class="lang-zh">隐藏，但不动<span class="accent">原来的东西</span>。</span>
+              <span class="lang-en">Hide it. <span class="accent">Don't touch</span> anything else.</span>
+            </h2>
+          </div>
+          <div class="chapter-copy" data-reveal>
+            <p class="lang-block lang-zh">它只改一个属性：快捷方式的隐藏位。文件还在原处，卸载项也没有被删除。</p>
+            <p class="lang-block lang-en">It changes one attribute: the shortcut's hidden bit. The file stays where it is, and the uninstall entry is not deleted.</p>
+            <p class="lang-block lang-zh">工具会记住每个快捷方式最初的属性。取消勾选时，恢复的是原先的状态，而不是把所有隐藏标记都清掉。</p>
+            <p class="lang-block lang-en">The original state of every shortcut is remembered. Unchecking restores that state instead of blindly clearing every hidden flag.</p>
+
+            <div class="lang-block lang-zh">
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <span class="feature-item__num">01</span>
+                  <div><h3>三种状态</h3><p>未隐藏、被其它方式隐藏、由本工具管理。界面上分得清，恢复时也不会弄乱。</p></div>
+                </li>
+                <li class="feature-item">
+                  <span class="feature-item__num">02</span>
+                  <div><h3>登录时重新应用</h3><p>可选计划任务，每次登录重新应用你的列表；也可以持续监视开始菜单的变化。</p></div>
+                </li>
+                <li class="feature-item">
+                  <span class="feature-item__num">03</span>
+                  <div><h3>键盘完整可用</h3><p>方向键、空格、Enter、右键菜单键都已接好。不用为了一个复选框去摸鼠标。</p></div>
+                </li>
+              </ul>
+            </div>
+            <div class="lang-block lang-en">
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <span class="feature-item__num">01</span>
+                  <div><h3>Three states</h3><p>Not hidden, hidden by something else, or managed here. The list tells them apart, and restoring doesn't make a mess.</p></div>
+                </li>
+                <li class="feature-item">
+                  <span class="feature-item__num">02</span>
+                  <div><h3>Reapply at sign-in</h3><p>An optional scheduled task reapplies your list at sign-in — or keeps watching the Start menu for changes.</p></div>
+                </li>
+                <li class="feature-item">
+                  <span class="feature-item__num">03</span>
+                  <div><h3>Keyboard-friendly</h3><p>Arrow keys, Space, Enter and the context-menu key are all wired up. You never need to reach for the mouse.</p></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screenshot-chapter" aria-labelledby="nui-shot-2-title">
+      <div class="container">
+        <div class="chapter-label" data-reveal>05 / Dark theme</div>
+        <div class="screenshot-chapter__head" data-reveal>
+          <h2 class="screenshot-chapter__title" id="nui-shot-2-title"><span class="lang-zh">深色主题</span><span class="lang-en">Dark theme</span></h2>
+          <span class="screenshot-chapter__meta">Screenshot 02 · Dark theme</span>
+        </div>
+        <figure data-reveal>
+          <div class="screenshot-frame screenshot-frame--window" role="img" aria-label="No Uninstall Icon 深色主题截图占位，16 比 9" data-aria-zh="No Uninstall Icon 深色主题截图占位，16 比 9" data-aria-en="Placeholder for the No Uninstall Icon dark theme, 16 by 9">
+            <div class="screenshot-frame__bar" aria-hidden="true">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <span>No Uninstall Icon / Dark theme</span>
+            </div>
+            <div class="screenshot-frame__canvas">
+              <div class="screenshot-frame__mock" aria-hidden="true">
+                <div class="screenshot-frame__mock-side"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="screenshot-frame__mock-main"><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="screenshot-frame__inner" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                <strong><span class="lang-zh">界面截图位</span><span class="lang-en">Screenshot slot</span></strong>
+                <span>16:9 · 1920 × 1080</span>
+              </div>
+            </div>
+          </div>
+          <figcaption class="screenshot-caption">
+            <span><strong><span class="lang-zh">深色主题与列表</span><span class="lang-en">Dark theme and the list</span></strong> · <span class="lang-zh">截图待补充</span><span class="lang-en">screenshot to be added</span></span>
+            <span>NUI / 02</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="software-chapter software-chapter--compact" aria-labelledby="nui-native-title">
+      <div class="container">
+        <div class="chapter-split">
+          <div class="chapter-split__head">
+            <div class="chapter-label" data-reveal>06 / Native by default</div>
+            <h2 class="chapter-title" id="nui-native-title" data-reveal>
+              <span class="lang-zh">原生 C++，和 <span class="accent">Windows</span> 长在一起。</span>
+              <span class="lang-en">Native C++, at home <span class="accent">on Windows</span>.</span>
+            </h2>
+          </div>
+          <div class="chapter-copy" data-reveal>
+            <p class="lang-block lang-zh">只用 C++20 和 Windows SDK 写成：没有 .NET，没有 Electron，也没有第三方库。窗口用 Direct2D / DirectWrite 绘制，落在 DirectComposition 表面上；系统提供 Mica 时，它就是一张 Mica 窗口。</p>
+            <p class="lang-block lang-en">Built with C++20 and the Windows SDK only. No .NET, no Electron, no third-party libraries. The window is drawn with Direct2D and DirectWrite on DirectComposition, and uses Mica when Windows offers it.</p>
+            <p class="lang-block lang-zh">可执行文件是自包含的，不需要额外安装运行时。支持 64 位 Windows 10（1809 及以后）和 Windows 11。</p>
+            <p class="lang-block lang-en">The executable is self-contained and needs no runtime install. It supports 64-bit Windows 10 (1809 and later) and Windows 11.</p>
+            <div class="software-chips">
+              <span class="software-chip">C++20</span>
+              <span class="software-chip">Direct2D / DirectWrite</span>
+              <span class="software-chip">DirectComposition</span>
+              <span class="software-chip">Mica</span>
+              <span class="software-chip"><span class="lang-zh">零依赖</span><span class="lang-en">0 dependencies</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-cta" aria-labelledby="nui-cta-title">
+      <div class="container software-cta__inner">
+        <div class="chapter-label" data-reveal>07 / Source</div>
+        <h2 id="nui-cta-title" data-reveal>
+          <span class="lang-zh">在 GitHub 查看项目。</span>
+          <span class="lang-en">See the project on GitHub.</span>
+        </h2>
+        <p data-reveal>
+          <span class="lang-zh">No Uninstall Icon 是开源项目。源码、架构、构建与测试文档都在仓库里。</span>
+          <span class="lang-en">No Uninstall Icon is open source. The source, architecture, build and testing docs live in the repository.</span>
+        </p>
+        <div class="software-cta__actions" data-reveal>
+          <a class="btn btn--primary btn--large reveal" href="https://github.com/JerryABCD06/NoUninstallIcon" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon--fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            <span class="lang-zh">在 GitHub 查看</span><span class="lang-en">View on GitHub</span>
+          </a>
+          <a class="btn btn--secondary btn--large reveal" href="/">
+            <span class="lang-zh">返回作品</span><span class="lang-en">Back to works</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </div>
+        <p class="software-cta__note">Windows 10 1809+ / Windows 11 · 64-bit</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__left">
+        <span>© <span data-year>2026</span> 王云正</span>
+        <span class="credit"><span class="lang-zh">字标字体</span><span class="lang-en">Wordmark type</span>: <a href="https://hyperos.mi.com/font/" target="_blank" rel="noopener noreferrer">MiSans</a></span>
+      </div>
+      <div class="site-footer__right">
+        <a class="footer-link" href="https://github.com/JerryABCD06" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon--fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          GitHub
+        </a>
+        <span class="credit"><span class="lang-zh">静态作品集</span><span class="lang-en">Static portfolio</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sr-only" id="live-region" aria-live="polite"></div>
+</body>
+</html>
+

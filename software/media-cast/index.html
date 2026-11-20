@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-page-lang="bilingual"
+      data-lang="zh"
+      data-theme-mode="auto"
+      data-title-zh="Media Cast（媒体投屏）· 王云正"
+      data-title-en="Media Cast · 王云正">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Media Cast（媒体投屏）· 王云正</title>
+  <meta name="description" content="Media Cast：Windows 上的 DLNA / UPnP AV 媒体投送接收器。" data-desc-zh="Media Cast：Windows 上的 DLNA / UPnP AV 媒体投送接收器。" data-desc-en="Media Cast: a DLNA / UPnP AV media casting receiver for Windows.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f3f3f3">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <script src="/assets/js/boot.js"></script>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body class="software-page software-page--cast">
+  <a class="skip-link" href="#main">
+    <span class="lang-zh">跳到主要内容</span><span class="lang-en">Skip to content</span>
+  </a>
+
+  <header class="site-header" data-site-header>
+    <div class="header-inner">
+      <a class="brand" href="/" data-brand data-aria-zh="王云正，返回首页" data-aria-en="Wang Yunzheng, home">
+        <span class="brand__word" aria-hidden="true">
+          <img class="brand__ink brand__ink--light" src="/assets/img/wordmark-light.svg" alt="王云正" width="2932" height="936" decoding="async">
+          <img class="brand__ink brand__ink--dark" src="/assets/img/wordmark-dark.svg" alt="王云正" width="2932" height="936" decoding="async">
+          <span class="brand__sheen"></span>
+        </span>
+        <span class="sr-only">王云正</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航" data-aria-zh="主导航" data-aria-en="Primary navigation">
+        <a class="nav-link" href="/"><span class="lang-zh">作品</span><span class="lang-en">Works</span></a>
+        <a class="nav-link" href="/#localization"><span class="lang-zh">汉化</span><span class="lang-en">Localization</span></a>
+        <a class="nav-link" href="/#software"><span class="lang-zh">软件</span><span class="lang-en">Software</span></a>
+      </nav>
+
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="打开导航">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+        <a href="/"><span><span class="lang-zh">作品</span><span class="lang-en">Works</span></span></a>
+        <a href="/#localization"><span><span class="lang-zh">汉化</span><span class="lang-en">Localization</span></span></a>
+        <a href="/#software"><span><span class="lang-zh">软件</span><span class="lang-en">Software</span></span></a>
+      </div>
+
+      <div class="header-actions">
+        <div class="theme-picker" data-theme-picker>
+          <button class="icon-btn theme-trigger" type="button" data-theme-trigger aria-expanded="false" aria-controls="theme-menu" aria-label="主题设置">
+            <span class="theme-icon theme-icon--auto" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span>
+            <span class="theme-icon theme-icon--light" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></span>
+            <span class="theme-icon theme-icon--dark" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M20.4 14.4A8.5 8.5 0 0 1 9.6 3.6 8.5 8.5 0 1 0 20.4 14.4Z"/></svg></span>
+          </button>
+          <div class="theme-menu" id="theme-menu" data-theme-menu role="group" aria-label="主题" data-aria-zh="主题" data-aria-en="Theme" hidden>
+            <div class="theme-menu__label"><span class="lang-zh">外观</span><span class="lang-en">Appearance</span></div>
+            <button class="theme-option" type="button" data-theme-choice="auto" aria-pressed="true">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg><span><span class="lang-zh">跟随系统</span><span class="lang-en">System</span></span><svg class="icon theme-option__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>
+            </button>
+            <button class="theme-option" type="button" data-theme-choice="light" aria-pressed="false">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><span><span class="lang-zh">浅色</span><span class="lang-en">Light</span></span><svg class="icon theme-option__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>
+            </button>
+            <button class="theme-option" type="button" data-theme-choice="dark" aria-pressed="false">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 14.4A8.5 8.5 0 0 1 9.6 3.6 8.5 8.5 0 1 0 20.4 14.4Z"/></svg><span><span class="lang-zh">深色</span><span class="lang-en">Dark</span></span><svg class="icon theme-option__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>
+            </button>
+          </div>
+        </div>
+        <button class="lang-toggle" type="button" data-language-toggle aria-label="Switch to English">
+          <svg class="icon icon--small" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3Z"/></svg>
+          <span class="lang-zh" aria-hidden="true">EN</span>
+          <span class="lang-en" aria-hidden="true">中</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__fill" data-scroll-progress></div></div>
+
+  <main id="main" class="software-main" tabindex="-1">
+    <section class="software-hero">
+      <div class="container software-hero__grid">
+        <div class="software-hero__copy">
+          <div class="software-hero__kicker enter" style="--i: 0">
+            <span class="eyebrow"><span class="lang-zh">软件 / 02</span><span class="lang-en">Software / 02</span></span>
+            <span class="early-badge"><span class="lang-zh">早期开发</span><span class="lang-en">Early development</span></span>
+          </div>
+          <h1 class="software-title enter" style="--i: 1">Media <span class="accent-word">Cast</span></h1>
+          <p class="software-title-cn enter" style="--i: 2">
+            <span class="lang-zh">媒体投屏接收器</span>
+            <span class="lang-en">A media casting receiver for Windows.</span>
+          </p>
+          <p class="software-tagline enter" style="--i: 3">
+            <span class="lang-zh">手机投过来，电脑这边播放。</span>
+            <span class="lang-en">Send it from your phone. Play it on your PC.</span>
+          </p>
+          <p class="software-lead enter" style="--i: 3">
+            <span class="lang-zh">Windows 上的 DLNA / UPnP AV 投送接收器。用手机里熟悉的投送入口，把媒体送到电脑上播放。</span>
+            <span class="lang-en">A DLNA / UPnP AV receiver for Windows. Use the cast button you already know, and play the media on your PC.</span>
+          </p>
+          <div class="software-actions enter" style="--i: 4">
+            <a class="btn btn--primary btn--large reveal" href="https://github.com/JerryABCD06/MediaCast" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon--fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              <span class="lang-zh">在 GitHub 查看</span><span class="lang-en">View on GitHub</span>
+            </a>
+            <a class="btn btn--secondary btn--large reveal" href="#one-button">
+              <span class="lang-zh">看看它怎么工作</span><span class="lang-en">See how it works</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+            </a>
+          </div>
+          <div class="software-chips enter" style="--i: 5">
+            <span class="software-chip">DLNA / UPnP AV</span>
+            <span class="software-chip">libmpv</span>
+            <span class="software-chip">Qt 6 + QML</span>
+            <span class="software-chip">Windows</span>
+          </div>
+        </div>
+
+        <div class="software-hero__visual enter" style="--i: 3">
+          <div class="hero-window-wrap" aria-hidden="true">
+            <div class="hero-window" data-tilt>
+              <div class="hero-window__bar">
+                <div class="window-dots"><i></i><i></i><i></i></div>
+                <span>Media Cast</span>
+              </div>
+              <div class="hero-window__body hero-window__body--cast">
+                <div class="cast-stage">
+                  <div class="cast-visual">
+                    <span class="cast-visual__ring"></span>
+                    <span class="cast-visual__ring"></span>
+                    <span class="cast-visual__ring"></span>
+                    <span class="cast-visual__core"><svg class="icon" viewBox="0 0 24 24"><path d="m10 7 7 5-7 5V7Z"/></svg></span>
+                  </div>
+                </div>
+                <div class="cast-window__meta">
+                  <div class="cast-window__meta-lines"><i></i><i></i></div>
+                  <div class="cast-window__progress"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-chapter software-chapter--compact" id="one-button">
+      <div class="container">
+        <div class="chapter-label" data-reveal>02 / Casting</div>
+        <h2 class="chapter-statement" data-reveal>
+          <span class="lang-zh">投屏，本来就应该<span class="accent">只是按一下</span>。</span>
+          <span class="lang-en">Casting should be <span class="accent">one button</span>, not a setup project.</span>
+        </h2>
+        <div class="chapter-lede" data-reveal>
+          <p class="lang-block lang-zh">Media Cast 接收 DLNA / UPnP AV 投送。手机从相册或支持投送的应用里选择这台电脑，剩下的交给它。</p>
+          <p class="lang-block lang-en">Media Cast receives DLNA / UPnP AV casts. Pick this PC from the gallery or the cast menu you already use on your phone, and leave the rest to the receiver.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screenshot-chapter" aria-labelledby="cast-shot-1-title">
+      <div class="container">
+        <div class="chapter-label" data-reveal>03 / Interface</div>
+        <div class="screenshot-chapter__head" data-reveal>
+          <h2 class="screenshot-chapter__title" id="cast-shot-1-title"><span class="lang-zh">接收与播放</span><span class="lang-en">Receive and play</span></h2>
+          <span class="screenshot-chapter__meta">Screenshot 01 · Now playing</span>
+        </div>
+        <figure data-reveal>
+          <div class="screenshot-frame screenshot-frame--window" role="img" aria-label="Media Cast 接收与播放界面截图占位，16 比 9" data-aria-zh="Media Cast 接收与播放界面截图占位，16 比 9" data-aria-en="Placeholder for the Media Cast receiving and playback interface, 16 by 9">
+            <div class="screenshot-frame__bar" aria-hidden="true">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <span>Media Cast / Now playing</span>
+            </div>
+            <div class="screenshot-frame__canvas">
+              <div class="screenshot-frame__mock" aria-hidden="true">
+                <div class="screenshot-frame__mock-side"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="screenshot-frame__mock-main"><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="screenshot-frame__inner" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                <strong><span class="lang-zh">界面截图位</span><span class="lang-en">Screenshot slot</span></strong>
+                <span>16:9 · 1920 × 1080</span>
+              </div>
+            </div>
+          </div>
+          <figcaption class="screenshot-caption">
+            <span><strong><span class="lang-zh">接收状态与播放界面</span><span class="lang-en">Receiving state and playback</span></strong> · <span class="lang-zh">截图待补充</span><span class="lang-en">screenshot to be added</span></span>
+            <span>CAST / 01</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="software-chapter" aria-labelledby="cast-chain-title">
+      <div class="container">
+        <div class="chapter-split">
+          <div class="chapter-split__head">
+            <div class="chapter-label" data-reveal>04 / The chain</div>
+            <h2 class="chapter-title" id="cast-chain-title" data-reveal>
+              <span class="lang-zh">一个窗口，背后是一条<span class="accent">完整的播放链路</span>。</span>
+              <span class="lang-en">One window, a <span class="accent">complete playback path</span>.</span>
+            </h2>
+          </div>
+          <div class="chapter-copy" data-reveal>
+            <p class="lang-block lang-zh">投送协议、播放内核和桌面界面各做各的事。接收使用 DLNA / UPnP AV，播放交给 libmpv，画面通过 render API 合成进 QML 界面。</p>
+            <p class="lang-block lang-en">The protocol, playback engine and desktop UI each do their job. Casts arrive over DLNA / UPnP AV, libmpv handles playback, and the video is composed into the QML interface through its render API.</p>
+            <p class="lang-block lang-zh">关掉窗口，接收还在托盘里；需要让手机暂时搜不到这台电脑时，可以暂停接收投送。</p>
+            <p class="lang-block lang-en">Close the window and receiving continues in the tray. When you want your phone to stop seeing the PC for a while, pause receiving.</p>
+
+            <div class="lang-block lang-zh">
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <span class="feature-item__num">01</span>
+                  <div><h3>接收</h3><p>DLNA / UPnP AV 投送。用手机里已经有的投送入口，不必在手机端再装一套配套应用。</p></div>
+                </li>
+                <li class="feature-item">
+                  <span class="feature-item__num">02</span>
+                  <div><h3>播放</h3><p>libmpv 负责播放，画面直接合成进 QML 界面。播放体验和界面不是两套东西。</p></div>
+                </li>
+                <li class="feature-item">
+                  <span class="feature-item__num">03</span>
+                  <div><h3>常驻</h3><p>关闭主窗口后仍可从托盘接收；暂停接收则会让手机暂时发现不了这台电脑。</p></div>
+                </li>
+              </ul>
+            </div>
+            <div class="lang-block lang-en">
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <span class="feature-item__num">01</span>
+                  <div><h3>Receive</h3><p>DLNA / UPnP AV casts, from the cast entry your phone already has. No extra companion app on the phone.</p></div>
+                </li>
+                <li class="feature-item">
+                  <span class="feature-item__num">02</span>
+                  <div><h3>Play</h3><p>libmpv handles playback, and the video is composed straight into the QML interface. Playback and UI are one surface.</p></div>
+                </li>
+                <li class="feature-item">
+                  <span class="feature-item__num">03</span>
+                  <div><h3>Stay resident</h3><p>Closing the main window leaves the receiver in the tray. Pause receiving to hide the PC from your phone temporarily.</p></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screenshot-chapter" aria-labelledby="cast-shot-2-title">
+      <div class="container">
+        <div class="chapter-label" data-reveal>05 / Desktop</div>
+        <div class="screenshot-chapter__head" data-reveal>
+          <h2 class="screenshot-chapter__title" id="cast-shot-2-title"><span class="lang-zh">设置与系统媒体控件</span><span class="lang-en">Settings and system media controls</span></h2>
+          <span class="screenshot-chapter__meta">Screenshot 02 · Settings</span>
+        </div>
+        <figure data-reveal>
+          <div class="screenshot-frame screenshot-frame--window" role="img" aria-label="Media Cast 设置与系统媒体控件截图占位，16 比 9" data-aria-zh="Media Cast 设置与系统媒体控件截图占位，16 比 9" data-aria-en="Placeholder for Media Cast settings and system media controls, 16 by 9">
+            <div class="screenshot-frame__bar" aria-hidden="true">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <span>Media Cast / Settings</span>
+            </div>
+            <div class="screenshot-frame__canvas">
+              <div class="screenshot-frame__mock" aria-hidden="true">
+                <div class="screenshot-frame__mock-side"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="screenshot-frame__mock-main"><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="screenshot-frame__inner" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                <strong><span class="lang-zh">界面截图位</span><span class="lang-en">Screenshot slot</span></strong>
+                <span>16:9 · 1920 × 1080</span>
+              </div>
+            </div>
+          </div>
+          <figcaption class="screenshot-caption">
+            <span><strong><span class="lang-zh">设置页与系统媒体控件</span><span class="lang-en">Settings and system media controls</span></strong> · <span class="lang-zh">截图待补充</span><span class="lang-en">screenshot to be added</span></span>
+            <span>CAST / 02</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="software-chapter software-chapter--compact" aria-labelledby="cast-desktop-title">
+      <div class="container">
+        <div class="chapter-split">
+          <div class="chapter-split__head">
+            <div class="chapter-label" data-reveal>06 / The desktop part</div>
+            <h2 class="chapter-title" id="cast-desktop-title" data-reveal>
+              <span class="lang-zh">它看起来像 <span class="accent">Windows 的一部分</span>。</span>
+              <span class="lang-en">It looks like it <span class="accent">belongs on Windows</span>.</span>
+            </h2>
+          </div>
+          <div class="chapter-copy" data-reveal>
+            <p class="lang-block lang-zh">界面使用 Qt 6 + QML 的 FluentUI 风格，跟随系统的深浅色和语言。原生托盘、系统媒体控件和按需出现的窗口，都是桌面端的一部分。</p>
+            <p class="lang-block lang-en">The interface is built with Qt 6 and QML in a FluentUI style, following the system's light/dark theme and language. Native tray integration, system media controls and a window that appears when needed are all part of the desktop experience.</p>
+            <p class="lang-block lang-zh">Media Cast 仍在早期开发：目前没有预编译版本，需要从源码构建。仓库里有协议、架构与构建文档。</p>
+            <p class="lang-block lang-en">Media Cast is still in early development: there are no prebuilt releases yet, and it has to be built from source. The repository has the protocol, architecture and build docs.</p>
+            <div class="software-chips">
+              <span class="software-chip">Qt 6 + QML</span>
+              <span class="software-chip">FluentUI</span>
+              <span class="software-chip">Native tray</span>
+              <span class="software-chip">System media controls</span>
+              <span class="software-chip">Early development</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-cta" aria-labelledby="cast-cta-title">
+      <div class="container software-cta__inner">
+        <div class="chapter-label" data-reveal>07 / Source</div>
+        <h2 id="cast-cta-title" data-reveal>
+          <span class="lang-zh">在 GitHub 看项目。</span>
+          <span class="lang-en">Follow the build on GitHub.</span>
+        </h2>
+        <p data-reveal>
+          <span class="lang-zh">早期开发中，暂无预编译版本。仓库里有源码、协议实现和构建文档。</span>
+          <span class="lang-en">Early development, with no prebuilt releases yet. The repository contains the source, the protocol implementation and the build docs.</span>
+        </p>
+        <div class="software-cta__actions" data-reveal>
+          <a class="btn btn--primary btn--large reveal" href="https://github.com/JerryABCD06/MediaCast" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon--fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            <span class="lang-zh">在 GitHub 查看</span><span class="lang-en">View on GitHub</span>
+          </a>
+          <a class="btn btn--secondary btn--large reveal" href="/">
+            <span class="lang-zh">返回作品</span><span class="lang-en">Back to works</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </div>
+        <p class="software-cta__note">GPL-3.0 · Qt 6 + QML · Windows</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__left">
+        <span>© <span data-year>2026</span> 王云正</span>
+        <span class="credit"><span class="lang-zh">字标字体</span><span class="lang-en">Wordmark type</span>: <a href="https://hyperos.mi.com/font/" target="_blank" rel="noopener noreferrer">MiSans</a></span>
+      </div>
+      <div class="site-footer__right">
+        <a class="footer-link" href="https://github.com/JerryABCD06" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon--fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          GitHub
+        </a>
+        <span class="credit"><span class="lang-zh">静态作品集</span><span class="lang-en">Static portfolio</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sr-only" id="live-region" aria-live="polite"></div>
+</body>
+</html>
+
