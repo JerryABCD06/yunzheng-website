@@ -395,25 +395,42 @@
 
     var header = qs("[data-site-header]");
     var brand = qs("[data-brand]");
+    if (!header || !brand) {
+      return;
+    }
+
     var raf = 0;
     var lastEvent = null;
+
+    function activateHeaderSheen() {
+      header.classList.add("is-pointer-active");
+      header.style.setProperty("--hx", "50%");
+      brand.style.setProperty("--brand-x", "50");
+    }
+
+    function deactivateHeaderSheen() {
+      header.classList.remove("is-pointer-active");
+    }
 
     function flush() {
       raf = 0;
       var event = lastEvent;
-      if (!event || !header || !brand) {
+      if (!event) {
         return;
       }
 
-      var headerRect = header.getBoundingClientRect();
-      var brandRect = brand.getBoundingClientRect();
-      var headerPercent = ((event.clientX - headerRect.left) / headerRect.width) * 100;
-      var brandPercent = ((event.clientX - brandRect.left) / brandRect.width) * 100;
-
-      header.style.setProperty("--hx", clamp(headerPercent, 0, 100).toFixed(2) + "%");
-      brand.style.setProperty("--brand-x", clamp(brandPercent, -20, 120).toFixed(2));
       root.style.setProperty("--pointer-x", ((event.clientX / window.innerWidth) * 100).toFixed(2) + "%");
       root.style.setProperty("--pointer-y", ((event.clientY / window.innerHeight) * 100).toFixed(2) + "%");
+
+      if (header.classList.contains("is-pointer-active")) {
+        var headerRect = header.getBoundingClientRect();
+        var brandRect = brand.getBoundingClientRect();
+        var headerPercent = ((event.clientX - headerRect.left) / headerRect.width) * 100;
+        var brandPercent = ((event.clientX - brandRect.left) / brandRect.width) * 100;
+
+        header.style.setProperty("--hx", clamp(headerPercent, 0, 100).toFixed(2) + "%");
+        brand.style.setProperty("--brand-x", clamp(brandPercent, -20, 120).toFixed(2));
+      }
 
       var reveal = event.target.closest(".reveal");
       if (reveal) {
@@ -434,11 +451,10 @@
       { passive: true }
     );
 
-    if (brand) {
-      brand.addEventListener("pointerleave", function () {
-        brand.style.removeProperty("--brand-x");
-      });
-    }
+    header.addEventListener("pointerenter", activateHeaderSheen);
+    header.addEventListener("pointerleave", deactivateHeaderSheen);
+    document.addEventListener("pointerleave", deactivateHeaderSheen);
+    window.addEventListener("blur", deactivateHeaderSheen);
   }
 
   function initTilt() {

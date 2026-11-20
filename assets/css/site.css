@@ -502,7 +502,12 @@ ol {
     transparent calc(var(--hx) + 12%),
     transparent 100%
   );
-  opacity: 0.5;
+  opacity: 0;
+  transition: opacity var(--dur-normal) var(--ease-fluent);
+}
+
+.site-header.is-pointer-active::after {
+  opacity: 0.7;
 }
 
 .site-header.is-scrolled {
@@ -575,7 +580,7 @@ ol {
       var(--brand-sheen) 0%,
       transparent 72%
     );
-  opacity: 0.82;
+  opacity: 0;
   -webkit-mask-image: url("/assets/img/wordmark-light.svg");
   mask-image: url("/assets/img/wordmark-light.svg");
   -webkit-mask-position: center;
@@ -592,9 +597,10 @@ ol {
   mask-image: url("/assets/img/wordmark-dark.svg");
 }
 
+.site-header.is-pointer-active .brand__sheen,
 .brand:hover .brand__sheen,
 .brand:focus-visible .brand__sheen {
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .primary-nav {
@@ -966,6 +972,8 @@ main {
 /* ---------- Buttons / links ---------- */
 
 .btn {
+  --btn-sheen: transparent;
+
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -978,7 +986,7 @@ main {
   background-color: transparent;
   background-image: radial-gradient(
     130px circle at var(--mx, 50%) var(--my, 50%),
-    var(--sheen),
+    var(--btn-sheen),
     transparent 68%
   );
   background-repeat: no-repeat;
@@ -995,6 +1003,11 @@ main {
     color var(--dur-fast) var(--ease-fluent),
     transform var(--dur-fast) var(--ease-fluent),
     box-shadow var(--dur-fast) var(--ease-fluent);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  --btn-sheen: var(--sheen);
 }
 
 .btn:hover {
@@ -1111,19 +1124,13 @@ main {
   transition: opacity var(--dur-normal) var(--ease-fluent);
 }
 
-.work-card.reveal::after,
-.software-card.reveal::after,
-.index-panel.reveal::after,
-.art-frame.reveal::after {
-  opacity: 0.6;
-}
-
 .work-card.reveal:hover::after,
 .software-card.reveal:hover::after,
 .index-panel.reveal:hover::after,
 .art-frame.reveal:hover::after,
 .work-card.reveal:focus-within::after,
-.software-card.reveal:focus-within::after {
+.software-card.reveal:focus-within::after,
+.index-panel.reveal:focus-within::after {
   opacity: 1;
 }
 
@@ -1793,6 +1800,8 @@ main {
 }
 
 .dl-btn {
+  --btn-sheen: transparent;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1805,7 +1814,7 @@ main {
   background-color: var(--surface-soft);
   background-image: radial-gradient(
     120px circle at var(--mx, 50%) var(--my, 50%),
-    var(--sheen),
+    var(--btn-sheen),
     transparent 68%
   );
   color: var(--text);
@@ -1818,6 +1827,11 @@ main {
     background-color var(--dur-fast) var(--ease-fluent),
     transform var(--dur-fast) var(--ease-fluent),
     opacity var(--dur-fast) var(--ease-fluent);
+}
+
+.dl-btn:not([aria-disabled="true"]):hover,
+.dl-btn:not([aria-disabled="true"]):focus-visible {
+  --btn-sheen: var(--sheen);
 }
 
 .dl-btn:hover {
@@ -1965,6 +1979,11 @@ main {
   font-weight: 700;
   letter-spacing: -0.06em;
   line-height: 0.98;
+}
+
+[data-lang="zh"] .software-card__title {
+  letter-spacing: -0.04em;
+  line-height: 1.06;
 }
 
 .software-card__cn {
@@ -2774,8 +2793,17 @@ main {
   text-wrap: balance;
 }
 
+[data-lang="zh"] .software-title {
+  letter-spacing: -0.045em;
+  line-height: 0.94;
+}
+
 .software-title .accent-word {
   color: var(--page-accent-strong);
+}
+
+.title-line {
+  display: block;
 }
 
 .software-title-cn {
